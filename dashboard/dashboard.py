@@ -6,10 +6,10 @@ import seaborn as sns
 
 # Import Dataset
 # day dataset
-day_df = pd.read_csv('C:/Users/Asus/PycharmProjects/DicodingDashboard/day_df.csv')
+day_df = pd.read_csv("dashboard/day_df.csv")
 #print(day_df.head())
 # hour dataset
-hour_df = pd.read_csv('C:/Users/Asus/PycharmProjects/DicodingDashboard/hour_df.csv')
+hour_df = pd.read_csv("dashboard/hour_df.csv")
 #print(hour_df.head())
 
 sns.set(style='dark')
@@ -50,8 +50,8 @@ def jen_season (day_df):
     season_df = day_df.groupby(by="season").count_cr.sum().reset_index()
     return season_df
 
-days_df = pd.read_csv('C:/Users/Asus/PycharmProjects/DicodingDashboard/day_df.csv')
-hours_df = pd.read_csv('C:/Users/Asus/PycharmProjects/DicodingDashboard/hour_df.csv')
+days_df = pd.read_csv("dashboard/day_df.csv")
+hours_df = pd.read_csv("dashboard/hour_df.csv")
 
 datetime_columns = ["dteday"]
 days_df.sort_values(by="dteday", inplace=True)
